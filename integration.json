@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "verification": "mock-only",
+  "releaseEligible": true,
+  "maintainer": "jannikco",
+  "license": "MIT",
+  "sourceRevision": "1da8da7635f319f00fbebd1393a668d21a4062fffd76726b5d6ea374957c1821",
+  "evidence": [
+    "Source-backed provider setup metadata",
+    "Offline configuration and MCP protocol tests"
+  ],
+  "provenance": [
+    "https://developer.clickup.com/openapi/clickup-api-v2-reference.json"
+  ],
+  "id": "clickup-mcp",
+  "kind": "mcp-setup",
+  "product": "pipmcp",
+  "title": "ClickUp MCP setup and connection checker",
+  "description": "Generate ClickUp MCP client configuration, inspect available tools and validate hosted endpoint access through PipMCP.",
+  "operationIds": [],
+  "appSlug": "clickup",
+  "appName": "ClickUp",
+  "providerDocs": "https://developer.clickup.com/openapi/clickup-api-v2-reference.json",
+  "providerWebsite": "https://clickup.com/",
+  "authentication": {
+    "type": "api_key_header",
+    "requiredCredentialFields": [
+      "api_key"
+    ],
+    "requiredHeaderNames": [],
+    "helpUrl": "https://developer.clickup.com/docs/authentication",
+    "tenantRequired": false,
+    "accountParameterNames": []
+  },
+  "attributionSlug": "github-clickup-mcp"
+}
