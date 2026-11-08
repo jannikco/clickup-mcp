@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "product": "pipmcp",
+  "credential": "PIPMCP_API_KEY",
+  "skills": [
+    {
+      "name": "pipmcp-clickup",
+      "description": "Connect AI agents to ClickUp using one PipMCP API key and actual hosted tool discovery."
+    }
+  ],
+  "files": {
+    "skills/pipmcp-clickup/SKILL.md": "b887fa66a2ab1707e2b8ea74ece98f7b6c057e1a5b3b9c12b66a1094aa325ef1"
+  }
+}
