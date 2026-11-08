@@ -1,0 +1,125 @@
+{
+  "id": "clickup",
+  "name": "ClickUp",
+  "version": "0.2.0",
+  "baseUrl": "https://api.clickup.com/api/v2",
+  "auth": {
+    "type": "header",
+    "env": "CLICKUP_API_TOKEN",
+    "header": "Authorization"
+  },
+  "tools": [
+    {
+      "name": "get_current_user",
+      "description": "Read the current ClickUp user.",
+      "method": "GET",
+      "path": "/user",
+      "readOnly": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "bindings": {
+        "path": [],
+        "query": {},
+        "body": {}
+      },
+      "sampleArguments": {},
+      "provenance": [
+        "https://developer.clickup.com/reference/getauthorizeduser"
+      ]
+    },
+    {
+      "name": "list_workspaces",
+      "description": "Read workspaces available to your token.",
+      "method": "GET",
+      "path": "/team",
+      "readOnly": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "bindings": {
+        "path": [],
+        "query": {},
+        "body": {}
+      },
+      "sampleArguments": {},
+      "provenance": [
+        "https://developer.clickup.com/reference/getauthorizedteams"
+      ]
+    }
+  ],
+  "workflow": {
+    "name": "Workspace access review",
+    "description": "Confirm the user and available ClickUp workspaces before selecting a team for reporting.",
+    "steps": [
+      "get_current_user",
+      "list_workspaces"
+    ]
+  },
+  "provenance": [
+    "https://developer.clickup.com/reference/getauthorizedteams"
+  ],
+  "verification": "mock-only",
+  "providerLiveValidation": "not-run",
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "get_current_user",
+          "level": "Tested",
+          "evidenceRefs": [
+            "Provider request/stdio contract tests"
+          ],
+          "method": "contract-fixture"
+        },
+        {
+          "name": "list_workspaces",
+          "level": "Tested",
+          "evidenceRefs": [
+            "Provider request/stdio contract tests"
+          ],
+          "method": "contract-fixture"
+        }
+      ],
+      "evidenceRefs": [
+        "Provider request/stdio contract tests"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [
+        {
+          "name": "get_current_user",
+          "level": "Documented",
+          "evidenceRefs": [],
+          "method": "documentation"
+        },
+        {
+          "name": "list_workspaces",
+          "level": "Documented",
+          "evidenceRefs": [],
+          "method": "documentation"
+        }
+      ],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
+  },
+  "repoId": "clickup-mcp",
+  "appSlug": "clickup",
+  "product": "pipmcp",
+  "artifactType": "connector",
+  "sourceRevision": "325ca52b619d179597ab17d7bf45ec5f2d93f2b20d0b8c58641a7833a8964d0b",
+  "managedAvailability": {
+    "status": "listed",
+    "checkedAt": "2026-11-08T12:29:10.433747+00:00"
+  }
+}
